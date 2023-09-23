@@ -27,9 +27,15 @@ voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<
 [2. The “Narratives” fMRI dataset for 
 evaluating models of naturalistic 
 language comprehension](https://www.nature.com/articles/s41597-021-01033-3)<br>
+该数据集在345名受试者上收集了891份fMRI扫描，刺激包含27个故事，每个故事3-56分钟，共4.6小时。刺激材料来源于广播录音、公共演讲、电影动画等。<br>
+<img src = "https://github.com/xiaRunZe/Neural-Decoding/figures/narratives.png", width=100px)
+
 [3. A synchronized multimodal 
 neuroimaging dataset for studying 
 brain language processing](https://www.nature.com/articles/s41597-022-01708-5)<br>
+该数据集收集了12名来自北京的大学生fMRI和MEG扫描记录，在听60个来自人民日报的故事（包含不同话题）时进行扫描，每个故事包含608-1076个词，4-7分钟。其中fMRI经7次扫描，每次1.5小时，第一次扫描结构MRI和静息状态MRI，后六次进行任务扫描fMRI。MEG数据也经6次任务扫描，与fMRI后6次扫描相对应。（但fMRI和MEG扫描中间间隔一个月以上，避免材料被熟记）每次扫描结束时，受试者需回答与故事相关的选择题。<br>
+刺激来源（人民日报评论）：https://www.ximalaya.com/album/30917322<br>
+
 [4. ZuCo, a
 simultaneous EEG and eye-tracking
 resource for natural sentence
