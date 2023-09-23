@@ -27,8 +27,9 @@ voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<
 [2. The “Narratives” fMRI dataset for 
 evaluating models of naturalistic 
 language comprehension](https://www.nature.com/articles/s41597-021-01033-3)<br>
-该数据集在345名受试者上收集了891份fMRI扫描，刺激包含27个故事，每个故事3-56分钟，共4.6小时。刺激材料来源于广播录音、公共演讲、电影动画等。<br>
-<img src = "https://github.com/xiaRunZe/Neural-Decoding/figures/图片.png", width=100px>
+该数据集在345名受试者上收集了891份fMRI扫描，刺激呈现方式为语音播放。刺激包含27个故事，每个故事3-56分钟，共4.6小时。刺激材料来源于广播录音、公共演讲、电影动画等。刺激分布如下图所示。<br>
+![image](https://github.com/xiaRunZe/Neural-Decoding/blob/main/figures/%E5%9B%BE%E7%89%87.png)
+
 
 [3. A synchronized multimodal 
 neuroimaging dataset for studying 
