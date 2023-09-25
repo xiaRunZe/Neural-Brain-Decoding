@@ -1,10 +1,11 @@
-# Language oriented Neural Decoding Survey
+# Neural-Brain Decoding Survey
 The purpose of this repository is to collect and investigate language oriented neural decoding work, and then making a comprehensive survey. 
 
-## 1.Survey
+## 1.Language oriented Works
+### 1.Survey
   This section will be supplemented in the future.<br>
 
-## 2.Researches
+### 2.Researches
 #### 2.1 EEG数据工作汇总
   [1. Open Vocabulary Electroencephalography-to-Text Decoding and Zero-Shot Sentiment Classifcation](https://ojs.aaai.org/index.php/AAAI/article/view/20472)`2022AAAI`<br>
   该工作发表在AAAI-22上，提出了`EEG2Text`任务，并在`ZuCO`数据集上使用BART模型，完成EEG信号生成开放域内的文本重建任务，并在此基础上进一步进行零样本情感分类。 <br>
@@ -35,7 +36,7 @@ The purpose of this repository is to collect and investigate language oriented n
 #### 2.4 多模态和其他信号工作
 [1. Functional Brain Connectivity of Language Functions in Children Revealed by EEG and MEG: A Systematic Review](https://www.frontiersin.org/articles/10.3389/fnhum.2020.00062/full)<br>
 <br>
-## 3.Datasets
+### 3.Datasets
 [1. A natural language fMRI dataset for voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<br>
 提供了包含8名受试者聆听27个自然叙述性故事(约370分钟)的fMRI数据，其中有3名受试者额外听了57个故事(约629分钟)进行扫描，刺激来源于The Moth和New York Times的Modern Love。此外，提供了构建编码模型的代码，使用岭回归进行预测，用于将单词语义特征拟合脑反应。<br>
 <br>
@@ -52,3 +53,12 @@ The purpose of this repository is to collect and investigate language oriented n
 <br>
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
 <br>
+## 2.Visual oriented Works
+<br>
+
+## 3.Other Works
+### 3.1 Classfication
+#### [1. CvFormer: Cross-view transFormers with Pre-training for fMRI Analysis of Human Brain](https://arxiv.org/abs/2309.07940) `2023-09-14 arxiv` <br>
+该工作提出一种用于结合fMRI中region of interest(RoI)和脑区域之间连接性两种视图的CvFormer架构，用于两种视图之间互补信息。并在ABIDE和ADNI两个数据集上进行`Alzheimer’s Disorder (AD)` 和 `Autism Spectrum Disorder(ASD)` 疾病诊断任务。表明这种交叉试图的方法的准确率超过其他单视图模型。
+<br>
+#### [2. Neural decoding of music from the EEG](https://www.nature.com/articles/s41598-022-27361-x) `2023-01-12 Scientific Reports` <br>
