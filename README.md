@@ -3,8 +3,17 @@ The purpose of this repository is to collect and investigate language oriented n
 
 ## 1.Language oriented Works
 ### 1.Survey
-  [1.Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding (Survey)](http://arxiv.org/abs/2307.10246) `2023-07-17`<br>
-  [2.Mapping Brains with Language Models: A Survey](http://arxiv.org/abs/2306.05126)`2023-06-08`
+  [1. Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding (Survey)](http://arxiv.org/abs/2307.10246) `2023-07-17`<br>
+  对脑编码和脑解码的全面调查，主要包含了刺激表现形式、按照刺激形式划分的数据集、评估指标，视、听、多模态、语言任务上的脑编码，视、听、语言任务上的脑解码。<br>
+  <b>挑战</b>：(1)理解视觉/语音/多模态模型与大脑信息处理相似性
+       (2)解码多模态刺激
+       (3)大脑不同部位损伤导致认知程度下降
+       (4)如何自监督训练NN，像人脑一样组成单词含义、理解图像和语音
+       (5)如何利用神经科学改进NN架构，提升准确性<br>
+  [2. Mapping Brains with Language Models: A Survey](http://arxiv.org/abs/2306.05126)`2023-06-08`<br>
+  [3. fMRI Brain Decoding and Its Applications in Brain–Computer Interface: A Survey](https://www.mdpi.com/2076-3425/12/2/228) ` 2022-02 Brain Sciences`<br>
+  [4. Application of Transfer Learning in EEG Decoding Based on Brain-Computer Interfaces: A Review](https://www.mdpi.com/1424-8220/20/21/6321) `2020-01 Sensors`<br>
+  [5. fMRI-based Decoding of Visual Information from Human Brain Activity: A Brief Review](https://link.springer.com/10.1007/s11633-020-1263-y)   `2021-04 International Journal of Automation and Computing` <br>
 
 ### 2.Researches
 #### 2.1 EEG数据工作汇总
@@ -30,14 +39,14 @@ The purpose of this repository is to collect and investigate language oriented n
 主要工作通过大脑解码任务比较不同的语言模型的句子表示与人脑活动匹配效果。通过微调NNLM研究其句子表示与人脑活动的匹配程度。结果表明NLP标准任务的微调降低了脑解码的性能，而语言模型表示的脑解码效果更优，表明fMRI可能无法解码细粒度的语法信息。<br>
 <br>
 [5. Syntactic Structure Processing in the Brain while Listening](https://ui.adsabs.harvard.edu/abs/2023arXiv230208589O/abstract)`2023-01`<br>
-使用三种句法解析方法(`选区解析树、依存解析树、递增自上而下解析树`)提取词特征，以及BERT提取语义特征。在Narratives`fMRI`数据集上训练编码模型预测大脑响应，评估不同特征在不同区域的的预测能力。选取解析树有助于解释`temporal lobe` 和 `middlefrontal gyrus`的激活，依存解析树更好的编码 `angular gyrus` 和 `posterior cingulate cortex`的句法结构，说明不容脑区对不同的句法解析方法敏感。尽管BERT的语义信号效果最好，无法解释脑区的差异。<br>
+使用三种句法解析方法(`选区解析树、依存解析树、递增自上而下解析树`)提取词特征，以及BERT提取语义特征。在Narratives`fMRI`数据集上训练编码模型预测大脑响应，评估不同特征在不同区域的的预测能力。选取解析树有助于解释`temporal lobe` 和 `middlefrontal gyrus`的激活，依存解析树更好的编码 `angular gyrus` 和 `posterior cingulate cortex`的句法结构，说明不容脑区对不同的句法解析方法敏感。尽管BERT的语义信号效果最好，无法解释脑区的差异。<br>
 <br>
 [6. Decoding Visual Neural Representations by Multimodal Learning of Brain-Visual-Linguistic Features](https://ieeexplore.ieee.org/abstract/document/10089190)`2023-03  Transactions on Pattern Analysis and Machine Intelligence`<br>
 <br>
 #### 2.4 多模态和其他信号工作
 [1. Functional Brain Connectivity of Language Functions in Children Revealed by EEG and MEG: A Systematic Review](https://www.frontiersin.org/articles/10.3389/fnhum.2020.00062/full)<br>
 [2. Brain Captioning: Decoding human brain activity into images and text](http://arxiv.org/abs/2305.11560)` 2023-05-19`<br>
-重建图像和文本任务，数据集为Natural Scenes Dataset(八位看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕，再使用该文本和估计的initial 和 depths map 重建图像。<br>
+重建图像和文本任务，数据集为Natural Scenes Dataset(八位受试者看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕（先进行脑编码），并通过VDVAE估计initial 和 depths 图像（均需进行脑编码），最终通过Stable Diffusion v2 + ControlNet实施重建最终图像。但事实上从结果上看重建的图片与实际图片差距较大（个人感觉是脑描述造成了误导）<br>
 ![图片](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18)
 <br>
 ### 3.Datasets
@@ -58,13 +67,17 @@ The purpose of this repository is to collect and investigate language oriented n
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
 <br>
 ## 2.Visual oriented Works
-[1.BrainCLIP: Bridging Brain and Visual-Linguistic Representation Via CLIP for Generic Natural Visual Stimulus Decoding](http://arxiv.org/abs/2302.12971)
+[1. BrainCLIP: Bridging Brain and Visual-Linguistic Representation Via CLIP for Generic Natural Visual Stimulus Decoding](http://arxiv.org/abs/2302.12971)<br>
+[2. MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion](http://arxiv.org/abs/2308.04249) `2023-08-08`<br>
+[3. Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors](http://arxiv.org/abs/2305.18274) ` 2023-05-29`<br>
+[4. UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](http://arxiv.org/abs/2308.07428) ` 2023-08-14`<br>
 <br>
 
 
 ## 3.Other Works
 ### 3.1 Classfication
-#### [1. CvFormer: Cross-view transFormers with Pre-training for fMRI Analysis of Human Brain](https://arxiv.org/abs/2309.07940) `2023-09-14 arxiv` <br>
+[1. CvFormer: Cross-view transFormers with Pre-training for fMRI Analysis of Human Brain](https://arxiv.org/abs/2309.07940) `2023-09-14 arxiv` <br>
 该工作提出一种用于结合fMRI中region of interest(RoI)和脑区域之间连接性两种视图的CvFormer架构，用于两种视图之间互补信息。并在ABIDE和ADNI两个数据集上进行`Alzheimer’s Disorder (AD)` 和 `Autism Spectrum Disorder(ASD)` 疾病诊断任务。表明这种交叉试图的方法的准确率超过其他单视图模型。
 <br>
-#### [2. Neural decoding of music from the EEG](https://www.nature.com/articles/s41598-022-27361-x) `2023-01-12 Scientific Reports` <br>
+[2. Neural decoding of music from the EEG](https://www.nature.com/articles/s41598-022-27361-x) `2023-01-12 Scientific Reports` <br>
+[3. Brain Encoding and Decoding in fMRI with Bidirectional Deep Generative Models](https://linkinghub.elsevier.com/retrieve/pii/S2095809917305647) `2019-09 Engineering`
