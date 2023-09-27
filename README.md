@@ -3,7 +3,8 @@ The purpose of this repository is to collect and investigate language oriented n
 
 ## 1.Language oriented Works
 ### 1.Survey
-  This section will be supplemented in the future.<br>
+  [1.Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding (Survey)](http://arxiv.org/abs/2307.10246) `2023-07-17`<br>
+  [2.Mapping Brains with Language Models: A Survey](http://arxiv.org/abs/2306.05126)`2023-06-08`
 
 ### 2.Researches
 #### 2.1 EEG数据工作汇总
@@ -35,6 +36,9 @@ The purpose of this repository is to collect and investigate language oriented n
 <br>
 #### 2.4 多模态和其他信号工作
 [1. Functional Brain Connectivity of Language Functions in Children Revealed by EEG and MEG: A Systematic Review](https://www.frontiersin.org/articles/10.3389/fnhum.2020.00062/full)<br>
+[2. Brain Captioning: Decoding human brain activity into images and text](http://arxiv.org/abs/2305.11560)` 2023-05-19`<br>
+重建图像和文本任务，数据集为Natural Scenes Dataset(八位看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕，再使用该文本和估计的initial 和 depths map 重建图像。<br>
+![图片](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18)
 <br>
 ### 3.Datasets
 [1. A natural language fMRI dataset for voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<br>
@@ -54,7 +58,9 @@ The purpose of this repository is to collect and investigate language oriented n
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
 <br>
 ## 2.Visual oriented Works
+[1.BrainCLIP: Bridging Brain and Visual-Linguistic Representation Via CLIP for Generic Natural Visual Stimulus Decoding](http://arxiv.org/abs/2302.12971)
 <br>
+
 
 ## 3.Other Works
 ### 3.1 Classfication
