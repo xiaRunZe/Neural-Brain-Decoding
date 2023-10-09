@@ -46,9 +46,19 @@ The purpose of this repository is to collect and investigate language oriented n
 #### 2.4 多模态和其他信号工作
 [1. Functional Brain Connectivity of Language Functions in Children Revealed by EEG and MEG: A Systematic Review](https://www.frontiersin.org/articles/10.3389/fnhum.2020.00062/full)<br>
 [2. Brain Captioning: Decoding human brain activity into images and text](http://arxiv.org/abs/2305.11560)` 2023-05-19`<br>
-重建图像和文本任务，数据集为Natural Scenes Dataset(八位受试者看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕（先进行脑编码），并通过VDVAE估计initial 和 depths 图像（均需进行脑编码），最终通过Stable Diffusion v2 + ControlNet实施重建最终图像。但事实上从结果上看重建的图片与实际图片差距较大（个人感觉是脑描述造成了误导）<br>
-![图片](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18)
+重建图像和文本任务，数据集为Natural Scenes Dataset(八位受试者看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕（先进行脑编码），并通过VDVAE估计initial 和 depths 图像（均需进行脑编码），最终通过Stable Diffusion v2 + ControlNet实施重建最终图像。缺陷：生成的caption较泛化，如用'动物'代替'牛'，且生成的caption细节的缺失和错误对生成图片造成了误导<br>
+![图片](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18)<br>
+[3. UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](http://arxiv.org/abs/2308.07428)<br>
+该工作完成fmri解码为图片和文本的任务。<br>
+![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/530075c8-18c0-47de-b9d0-749e8463a366)
+
+[4. MINDGPT: INTERPRETING WHAT YOU SEE WITH NON-INVASIVE BRAIN RECORDINGS](http://arxiv.org/abs/2309.15729)<br>
+该工作主要探索通过视觉线索将大脑活动转换为文本，换言之就是将fmri编码至clip视觉空间，再进一步转换到语义空间，此外该工作探究了脑区域之间的联系，比较了模型从高、低和全部视觉皮层中信号学习到的概念(下图如生物、金属以及方、圆)。即低级视觉皮层和高级视觉皮层信号的协同/冗余作用，排除了二者之间的协同作用可能性。
+![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/de9e1f5f-fa20-4923-80a3-06afc1d96370)
+![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/698715e9-0662-4f10-b12a-5e9ab8eb1150)
+
 <br>
+
 ### 3.Datasets
 [1. A natural language fMRI dataset for voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<br>
 提供了包含8名受试者聆听27个自然叙述性故事(约370分钟)的fMRI数据，其中有3名受试者额外听了57个故事(约629分钟)进行扫描，刺激来源于The Moth和New York Times的Modern Love。此外，提供了构建编码模型的代码，使用岭回归进行预测，用于将单词语义特征拟合脑反应。<br>
@@ -65,12 +75,14 @@ The purpose of this repository is to collect and investigate language oriented n
 该数据集提供了12名受试者进行阅读任务时的EEG和EyeTrack数据。刺激来源为斯坦福情感树库中影评和维基百科关系抽取语料中的句子。分为三个任务进行扫描(情感自然阅读，自然阅读和特定任务阅读)并回答问题，每次EEG扫描进行2-3小时。
 <br>
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
+[6. Natural Scenes Dataset (NSD)](https://naturalscenesdataset.org/) 该数据集包含了来自8位观看COCO图像的受试者的fMRI数据
 <br>
 ## 2.Visual oriented Works
 [1. BrainCLIP: Bridging Brain and Visual-Linguistic Representation Via CLIP for Generic Natural Visual Stimulus Decoding](http://arxiv.org/abs/2302.12971)<br>
 [2. MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion](http://arxiv.org/abs/2308.04249) `2023-08-08`<br>
 [3. Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors](http://arxiv.org/abs/2305.18274) ` 2023-05-29`<br>
-[4. UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](http://arxiv.org/abs/2308.07428) ` 2023-08-14`<br>
+[4. Natural scene reconstruction from fMRI signals using generative latent diffusion](http://arxiv.org/abs/2303.05334)<br>
+[5. Rethinking Visual Reconstruction: Experience-Based Content Completion Guided by Visual Cues](https://www.semanticscholar.org/paper/Rethinking-Visual-Reconstruction%3A-Experience-Based-Chen-Qi/1550ffa6cf4c6d82608eb1022d0cce1cd3ffe1b1)<br>
 <br>
 
 
