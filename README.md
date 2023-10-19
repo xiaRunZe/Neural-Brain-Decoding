@@ -43,19 +43,19 @@ The purpose of this repository is to collect and investigate language oriented n
 <br>
 [6. Decoding Visual Neural Representations by Multimodal Learning of Brain-Visual-Linguistic Features](https://ieeexplore.ieee.org/abstract/document/10089190)`2023-03  Transactions on Pattern Analysis and Machine Intelligence`<br>
 <br>
-#### 2.4 多模态和其他信号工作
+#### 2.4 Others（alignment、analysis）
 [1. Functional Brain Connectivity of Language Functions in Children Revealed by EEG and MEG: A Systematic Review](https://www.frontiersin.org/articles/10.3389/fnhum.2020.00062/full)<br>
-[2. Brain Captioning: Decoding human brain activity into images and text](http://arxiv.org/abs/2305.11560)` 2023-05-19`<br>
-重建图像和文本任务，数据集为Natural Scenes Dataset(八位受试者看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕（先进行脑编码），并通过VDVAE估计initial 和 depths 图像（均需进行脑编码），最终通过Stable Diffusion v2 + ControlNet实施重建最终图像。缺陷：生成的caption较泛化，如用'动物'代替'牛'，且生成的caption细节的缺失和错误对生成图片造成了误导<br>
-![图片](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18)<br>
-[3. UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](http://arxiv.org/abs/2308.07428)<br>
-该工作完成fmri解码为图片和文本的任务。<br>
-![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/530075c8-18c0-47de-b9d0-749e8463a366)
 
-[4. MINDGPT: INTERPRETING WHAT YOU SEE WITH NON-INVASIVE BRAIN RECORDINGS](http://arxiv.org/abs/2309.15729)<br>
-该工作主要探索通过视觉线索将大脑活动转换为文本，换言之就是将fmri编码至clip视觉空间，再进一步转换到语义空间，此外该工作探究了脑区域之间的联系，比较了模型从高、低和全部视觉皮层中信号学习到的概念(下图如生物、金属以及方、圆)。即低级视觉皮层和高级视觉皮层信号的协同/冗余作用，排除了二者之间的协同作用可能性。
-![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/de9e1f5f-fa20-4923-80a3-06afc1d96370)
-![image](https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/698715e9-0662-4f10-b12a-5e9ab8eb1150)
+[2. MINDGPT: INTERPRETING WHAT YOU SEE WITH NON-INVASIVE BRAIN RECORDINGS](http://arxiv.org/abs/2309.15729)<br>
+该工作主要探索通过视觉线索将大脑活动转换为文本，换言之就是将fmri编码至clip视觉空间，再进一步转换到语义空间，此外该工作探究了脑区域之间的联系，比较了模型从高、低和全部视觉皮层中信号学习到的概念(下图如生物、金属以及方、圆)。即低级视觉皮层和高级视觉皮层信号的协同/冗余作用，排除了二者之间的协同作用可能性。最终计算学习到的fmri编码与clip编码之间的余弦相似度，探究fmri编码学到了哪些信息。<br>
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/de9e1f5f-fa20-4923-80a3-06afc1d96370" width="40%">
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/698715e9-0662-4f10-b12a-5e9ab8eb1150" width="40%"><br>
+[3. BrainSCUBA: Fine-Grained Natural Language Captions of Visual Cortex Selectivity](http://arxiv.org/abs/2310.04420)  `arxiv preprint 10.6`
+该工作通过数据驱动的方式探究/验证视觉皮层脑区与对应刺激之间的关系，通过为脑区中每一个体素构建natural language caption，后续通过caption中的名词数量，caption生成的image探索该体素与对应刺激之间的联系，验证了不同脑区与不同刺激的对齐。<br>
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/1247197c-2f41-4897-ae61-92bfa85f3f2d" width="40%">
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/b9bbd79b-c487-477a-8dd2-b9362525998e" width="40%"><br>
+
+
 
 <br>
 
@@ -65,7 +65,7 @@ The purpose of this repository is to collect and investigate language oriented n
 <br>
 [2. The “Narratives” fMRI dataset for evaluating models of naturalistic language comprehension](https://www.nature.com/articles/s41597-021-01033-3)<br>
 该数据集在345名受试者上收集了891份`fMRI`扫描，刺激呈现方式为语音播放。刺激包含27个故事，每个故事3-56分钟，共4.6小时。刺激材料来源于广播录音、公共演讲、电影动画等。刺激分布如下图所示。<br>
-![image](https://github.com/xiaRunZe/Neural-Decoding/blob/main/figures/%E5%9B%BE%E7%89%87.png)
+<img src="https://github.com/xiaRunZe/Neural-Decoding/blob/main/figures/%E5%9B%BE%E7%89%87.png" width="40%"> 
 <br>
 [3. A synchronized multimodal neuroimaging dataset for studying brain language processing](https://www.nature.com/articles/s41597-022-01708-5)<br>
 该数据集收集了12名来自北京的大学生`fMRI`和`MEG`扫描记录，在听60个来自人民日报的故事（包含不同话题）时进行扫描，每个故事包含608-1076个词，4-7分钟。其中fMRI经7次扫描，每次1.5小时，第一次扫描结构MRI和静息状态MRI，后六次进行任务扫描fMRI。MEG数据也经6次任务扫描，与fMRI后6次扫描相对应。（但fMRI和MEG扫描中间间隔一个月以上，避免材料被熟记）每次扫描结束时，受试者需回答与故事相关的选择题。<br>
@@ -77,12 +77,18 @@ The purpose of this repository is to collect and investigate language oriented n
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
 [6. Natural Scenes Dataset (NSD)](https://naturalscenesdataset.org/) 该数据集包含了来自8位观看COCO图像的受试者的fMRI数据
 <br>
-## 2.Visual oriented Works
+## 2.Visual Reconstruction
 [1. BrainCLIP: Bridging Brain and Visual-Linguistic Representation Via CLIP for Generic Natural Visual Stimulus Decoding](http://arxiv.org/abs/2302.12971)<br>
 [2. MindDiffuser: Controlled Image Reconstruction from Human Brain Activity with Semantic and Structural Diffusion](http://arxiv.org/abs/2308.04249) `2023-08-08`<br>
 [3. Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors](http://arxiv.org/abs/2305.18274) ` 2023-05-29`<br>
 [4. Natural scene reconstruction from fMRI signals using generative latent diffusion](http://arxiv.org/abs/2303.05334)<br>
 [5. Rethinking Visual Reconstruction: Experience-Based Content Completion Guided by Visual Cues](https://www.semanticscholar.org/paper/Rethinking-Visual-Reconstruction%3A-Experience-Based-Chen-Qi/1550ffa6cf4c6d82608eb1022d0cce1cd3ffe1b1)<br>
+[6. Brain Captioning: Decoding human brain activity into images and text](http://arxiv.org/abs/2305.11560)` 2023-05-19`<br>
+重建图像和文本任务，数据集为Natural Scenes Dataset(八位受试者看COCO数据集受试者的fmri)。首先使用GIT模型生成大脑字幕（先进行脑编码），并通过VDVAE估计initial 和 depths 图像（均需进行脑编码），最终通过Stable Diffusion v2 + ControlNet实施重建最终图像。缺陷：生成的caption较泛化，如用'动物'代替'牛'，且生成的caption细节的缺失和错误对生成图片造成了误导<br>
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/fa089ad0-07f8-4229-8447-e519df4f9f18" width="50%"><br>
+[7. UniBrain: Unify Image Reconstruction and Captioning All in One Diffusion Model from Human Brain Activity](http://arxiv.org/abs/2308.07428)<br>
+该工作完成fmri解码为图片和文本的任务。<br>
+<img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/530075c8-18c0-47de-b9d0-749e8463a366" width="40%"><br>
 <br>
 
 
