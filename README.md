@@ -54,8 +54,6 @@ The purpose of this repository is to collect and investigate language oriented n
 该工作通过数据驱动的方式探究/验证视觉皮层脑区与对应刺激之间的关系，通过为脑区中每一个体素构建natural language caption，后续通过caption中的名词数量，caption生成的image探索该体素与对应刺激之间的联系，验证了不同脑区与不同刺激的对齐。<br>
 <img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/1247197c-2f41-4897-ae61-92bfa85f3f2d" width="40%">
 <img src="https://github.com/xiaRunZe/Neural-Brain-Decoding/assets/121854058/b9bbd79b-c487-477a-8dd2-b9362525998e" width="40%"><br>
-[4. Predictive Coding or Just Feature Discovery? An Alternative Account of Why Language Models Fit Brain Data](https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00087/113632/Predictive-Coding-or-Just-Feature-Discovery-An)  `LM and brain ` <br>
-[5. Explaining black box text modules in natural language with language models](http://arxiv.org/abs/2305.09863) `LM and brain`<br>
 
 
 ## 3.Visual Reconstruction
@@ -82,7 +80,7 @@ The purpose of this repository is to collect and investigate language oriented n
 [3. Brain Encoding and Decoding in fMRI with Bidirectional Deep Generative Models](https://linkinghub.elsevier.com/retrieve/pii/S2095809917305647) `2019-09 Engineering`
 <br>
 
-### 5.Datasets
+## 5.Datasets
 [1. A natural language fMRI dataset for voxelwise encoding models ](https://www.nature.com/articles/s41597-023-02437-z)<br>
 提供了包含8名受试者聆听27个自然叙述性故事(约370分钟)的fMRI数据，其中有3名受试者额外听了57个故事(约629分钟)进行扫描，刺激来源于The Moth和New York Times的Modern Love。此外，提供了构建编码模型的代码，使用岭回归进行预测，用于将单词语义特征拟合脑反应。<br>
 <br>
@@ -99,6 +97,13 @@ The purpose of this repository is to collect and investigate language oriented n
 <br>
 [5. Open multimodal iEEG-fMRI dataset from naturalistic stimulation with a short audiovisual film](https://www.nature.com/articles/s41597-022-01173-0)<br>
 [6. Natural Scenes Dataset (NSD)](https://naturalscenesdataset.org/) 该数据集包含了来自8位观看COCO图像的受试者的fMRI数据
-
 <br>
-
+## 6 LLMs and Brain 
+[1. Predictive Coding or Just Feature Discovery? An Alternative Account of Why Language Models Fit Brain Data](https://direct.mit.edu/nol/article/doi/10.1162/nol_a_00087/113632/Predictive-Coding-or-Just-Feature-Discovery-An)  `LM and brain ` <br>
+[2. Explaining black box text modules in natural language with language models](http://arxiv.org/abs/2305.09863) `2023-05 Arxiv Preprint`<br>
+本文探讨了如何使用大型语言模型（LLMs）来解释黑匣子文本模块，并提供了一种名为Summarize and Score（SASC）的方法来自动获取文本模块的自然语言解释及可靠度评分。黑匣子文本模块指的是任何将文本映射到标量连续值的函数，例如LLM中的子模块或大脑区域的拟合模型。文章阐述了SASC方法在三种情境下的使用，分别是用于合成模块的评估、解释预训练BERT模型中的模块以及生成用于解释语言刺激下单个fMRI体素响应的解释。这一研究表明，虽然LLMs的使用越来越广泛，但对它们的可解释性的要求也越来越高，而SASC提出的方法有望解决这一问题。
+[3. UNVEILING A CORE LINGUISTIC REGION IN LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2310.14928.pdf) `2023-10-23 Arxiv preprint`<br>
+复旦大学自然语言处理实验室最新研究发现，大语言模型中存在一个明显的语言能力（Linguistic Competence）核心区，该区域占据了模型参数的约1%。修改这一核心语言区的参数会严重破坏模型的语言能力。此外，研究还发现大语言模型存在严重的维度依赖（Dimension Dependence）问题。针对LLaMA2-13B模型，仅修改130亿参数中的一个，就会导致模型的语言能力完全丧失。这些发现为揭示大语言模型能力和知识如何构成提供了新思路，并能够在一定程度解释大语言模型的预训练和指令微调中很多与此前小模型训练非常不同的现象。<br>
+[4. THE TEMPORAL STRUCTURE OF LANGUAGE PRO-CESSING IN THE HUMAN BRAIN CORRESPONDS TO
+THE LAYERED HIERARCHY OF DEEP LANGUAGE MODELS](https://arxiv.org/pdf/2310.07106.pdf) `2023-10-11 Arxiv Preprint`<br>
+这篇论文主要研究了人类大脑和深度语言模型（Deep Language Models，简称DLMs）在自然语言处理中的相似性。研究者通过记录使用电皮层脑电图（ECoG）技术收集到听30分钟叙事故事的参与者大脑中神经活动的数据，并以GPT2-XL（一种高性能的DLM）作为研究对象。在实验过程中，研究者首先发现了人脑的时间序列在处理过程中与DLM的层次结构的相似性。研究者发现，该模型不仅可以应用于人类的语言相关区域，还可以深入了解人脑在空间层次上的神经活动。具体而言，研究结果揭示了人类大脑中的自然语言处理和深度语言模型之间的紧密联系以及两者间在语言理解方面的时间层次结构的相似性。<br>
